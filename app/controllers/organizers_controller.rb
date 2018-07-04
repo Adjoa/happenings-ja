@@ -14,6 +14,11 @@ class OrganizersController < ApplicationController
     json_response(@organizer)
   end
   
+  def update
+    @organizer.update(organizer_params)
+    head :no_content
+  end
+  
   private
   
   def organizer_params
