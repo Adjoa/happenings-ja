@@ -1,4 +1,5 @@
 class OrganizersController < ApplicationController
+  before_action :set_organizer, only: [:show, :update, :destroy]
   
   def index
     @organizers = Organizer.all
