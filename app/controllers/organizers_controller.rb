@@ -8,7 +8,7 @@ class OrganizersController < ApplicationController
   
   def create
     @organizer = Organizer.create!(organizer_params)
-    json_response(@todo, :created)
+    json_response(@organizer, :created)
   end
   
   def show
@@ -28,7 +28,7 @@ class OrganizersController < ApplicationController
   private
   
   def organizer_params
-    params.require(:organizer).permit(:name, :email, :phone, 
+    params.permit(:name, :email, :phone, 
       addresses_attributes: [
         :line1,
         :line2,
