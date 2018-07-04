@@ -10,6 +10,10 @@ class OrganizersController < ApplicationController
     json_response(@todo, :created)
   end
   
+  def show
+    json_response(@organizer)
+  end
+  
   private
   
   def organizer_params
