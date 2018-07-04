@@ -19,6 +19,11 @@ class OrganizersController < ApplicationController
     head :no_content
   end
   
+  def destroy
+    @organizer.destroy
+    head :no_content
+  end
+  
   private
   
   def organizer_params
