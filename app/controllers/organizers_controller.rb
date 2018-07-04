@@ -7,7 +7,7 @@ class OrganizersController < ApplicationController
   end
   
   def create
-    @organizer = Organizer.create(organizer_params)
+    @organizer = Organizer.create!(organizer_params)
     json_response(@todo, :created)
   end
   
