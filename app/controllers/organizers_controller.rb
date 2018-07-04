@@ -18,5 +18,9 @@ class OrganizersController < ApplicationController
       ]
     )
   end
+  
+  def set_organizer
+    @organizer = Organizer.find(params[:id])
+  end
 
 end
