@@ -28,8 +28,8 @@ class OrganizersController < ApplicationController
   private
   
   def organizer_params
-    params.permit(:name, :email, :phone, 
-      addresses_attributes: [
+    params.require(:organizer).permit(:name, :email, :phone, 
+      address_attributes: [
         :line1,
         :line2,
         :city,
