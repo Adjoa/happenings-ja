@@ -18,4 +18,14 @@ module ExceptionHandler
       json_response({ message: e.message }, :not_found)
     end
   end
+  
+  private
+
+  def four_twenty_two(e)
+    json_response({ message: e.message }, :unprocessable_entity)
+  end
+
+  def unauthorized_request(e)
+    json_response({ message: e.message }, :unauthorized)
+  end
 end
