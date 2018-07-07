@@ -18,6 +18,8 @@ class EventsController < ApplicationController
   end
   
   def update
+    @event.update
+    head :no_content
   end
   
   def destroy
