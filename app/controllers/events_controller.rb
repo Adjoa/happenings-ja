@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   
   def index
+    @events = Event.all
+    json_response(@events)
   end
   
   def create
@@ -28,7 +30,5 @@ class EventsController < ApplicationController
       ]
     )
   end
-  
-  
   
 end
