@@ -4,7 +4,7 @@ class Organizer < ApplicationRecord
   
   accepts_nested_attributes_for :address
   
-  validates :name, presence: true
+  validates :name, :password_digest, presence: true
   validates :email, 
             :presence => true, 
             :uniqueness => true, 
