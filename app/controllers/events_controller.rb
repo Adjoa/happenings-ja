@@ -39,4 +39,8 @@ class EventsController < ApplicationController
     @event = @organizer.events.find_by!(id: params[:id]) if @organizer
   end
   
+  def set_event
+    @event = Event.find(params[:id])
+  end
+  
 end
