@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  before_action :set_organizer, only: [:create, :update, :destroy]
+  before_action :set_organizer_event, only: [:create, :update, :destroy]
+  before_action :set_event, only: [:show]
   
   def index
     @events = Event.all
