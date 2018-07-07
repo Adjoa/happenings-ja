@@ -24,4 +24,8 @@ class AuthorizeApiRequest
       ("#{Message.invalid_token} #{e.message}")
     )
   end
+  
+  def decoded_auth_token
+    @decoded_auth_token ||= JsonWebToken.decode(http_auth_header)
+  end
 end
