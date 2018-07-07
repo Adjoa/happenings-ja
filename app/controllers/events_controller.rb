@@ -35,4 +35,8 @@ class EventsController < ApplicationController
     @organizer = Organizer.find(params[:organizer_id])
   end
   
+  def set_organizer_event
+    @event = @organizer.events.find_by!(id: params[:id]) if @organizer
+  end
+  
 end
