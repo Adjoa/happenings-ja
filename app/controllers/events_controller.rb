@@ -23,6 +23,8 @@ class EventsController < ApplicationController
   end
   
   def destroy
+    @event.destroy
+    head :no_content
   end
   
   private
