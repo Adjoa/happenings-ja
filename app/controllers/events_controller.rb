@@ -14,6 +14,7 @@ class EventsController < ApplicationController
   end
   
   def show
+    json_response(@event)
   end
   
   def update
