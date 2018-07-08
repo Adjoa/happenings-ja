@@ -1,4 +1,5 @@
 class OrganizersController < ApplicationController
+  skip_before_action :authorize_request, only: :create
   before_action :set_organizer, only: [:show, :update, :destroy]
   
   def index
