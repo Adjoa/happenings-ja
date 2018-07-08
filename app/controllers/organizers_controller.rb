@@ -8,7 +8,9 @@ class OrganizersController < ApplicationController
   
   def create
     @organizer = Organizer.create!(organizer_params)
-    json_response(@organizer, :created)
+    auth_token = AuthenticateUser.new(organizer.email, organizer.password).call
+    response = { message: Message.account_created, auth_token: auth_token }
+    json_response(response, :created)
   end
   
   def show
@@ -28,7 +30,12 @@ class OrganizersController < ApplicationController
   private
   
   def organizer_params
-    params.require(:organizer).permit(:name, :email, :phone, 
+    params.require(:organizer).permit(
+      :name, 
+      :email, 
+      :password, 
+      :password_confirmation,
+      :phone, 
       address_attributes: [
         :line1,
         :line2,
