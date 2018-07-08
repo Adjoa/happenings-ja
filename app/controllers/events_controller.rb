@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show]
   
   def index
-    @events = Event.all
+    @events = Event.all ||= current_user.events if current_user
     json_response(@events)
   end
   
