@@ -4,5 +4,10 @@ class ApiVersion
   def initialize(version, default = false)
     @version = version
     @default = default
-  end 
+  end
+  
+  # check whether version is specified or is default
+  def matches?(request)
+    check_headers(request.headers) || default
+  end
 end
