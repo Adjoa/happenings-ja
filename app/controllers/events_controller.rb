@@ -1,6 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_organizer, only: [:create, :update, :destroy]
-  before_action :set_organizer_event, only: [:create, :update, :destroy]
+  before_action :set_organizer_event, only: [:update, :destroy]
   before_action :set_event, only: [:show]
   
   def index
@@ -48,12 +47,8 @@ class EventsController < ApplicationController
     )
   end
   
-  def set_organizer
-    @organizer = Organizer.find(params[:organizer_id])
-  end
-  
   def set_organizer_event
-    @event = @organizer.events.find_by!(id: params[:id]) if @organizer
+    @event = current_user.events.find_by!(id: params[:id]) if current_user
   end
   
   def set_event
