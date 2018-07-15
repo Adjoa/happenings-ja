@@ -1,6 +1,5 @@
 module V1
   class OrganizersController < ApplicationController
-    skip_before_action :authorize_request, only: :create
     before_action :set_organizer, only: [:show, :update, :destroy]
     
     def index
@@ -10,9 +9,7 @@ module V1
     
     def create
       @organizer = Organizer.create!(organizer_params)
-      auth_token = AuthenticateUser.new(organizer.email, organizer.password).call
-      response = { message: Message.account_created, auth_token: auth_token }
-      json_response(response, :created)
+      json_response(@organizer, :created)
     end
     
     def show
