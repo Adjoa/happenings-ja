@@ -32,7 +32,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'active_model_serializers', '~> 0.10.7'
 
 # Add token-based authentication with JSON web tokens
-gem 'jwt', '~> 2.1'
+# gem 'jwt', '~> 2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
