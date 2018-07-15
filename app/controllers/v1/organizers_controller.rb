@@ -31,9 +31,7 @@ module V1
     def organizer_params
       params.require(:organizer).permit(
         :name, 
-        :email, 
-        :password, 
-        :password_confirmation,
+        :email,
         :phone, 
         address_attributes: [
           :line1,
