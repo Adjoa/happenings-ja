@@ -29,18 +29,8 @@ module V1
     private
     
     def organizer_params
-      params.require(:organizer).permit(
-        :name, 
-        :email,
-        :phone, 
-        address_attributes: [
-          :line1,
-          :line2,
-          :city,
-          :parish,
-          :country
-        ]
-      )
+      params.require(:organizer).permit(:name, :email, :phone, 
+        address_attributes: [:line1, :line2, :city, :parish, :country])
     end
     
     def set_organizer
