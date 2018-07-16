@@ -30,22 +30,8 @@ module V1
     private
     
     def event_params
-      params.require(:event).permit(
-        :name, 
-        :start_time, 
-        :end_time, 
-        :description, 
-        :contact_email, 
-        :contact_phone, 
-        :website, 
-        address_attributes: [
-          :line1,
-          :line2,
-          :city,
-          :parish,
-          :country
-        ]
-      )
+      params.require(:event).permit(:name, :start_time, :end_time, :description, 
+        address_attributes: [:line1, :line2, :city, :parish, :country])
     end
     
     def set_organizer_event
