@@ -1,8 +1,9 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <header>
-    <h1>Happenings JA</h1>
+    <NavLink to="/"><h1>Happenings JA</h1></NavLink>
   </header>
   );
   
