@@ -23,8 +23,8 @@ function mapDispatchToProps(dispatch){
   bindActionCreators({getEvents: getEvents}, dispatch)
 }
  
-// function mapStateToProps(state){
-//   return {events: state.events}
-// }
+function mapStateToProps(state){
+  return {events: state.events}
+}
 
-export const WrapperEventsPage = connect(null, mapDispatchToProps)(EventsPage);
+export const WrapperEventsPage = connect(mapStateToProps, mapDispatchToProps)(EventsPage);
