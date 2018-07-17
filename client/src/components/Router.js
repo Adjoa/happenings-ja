@@ -6,7 +6,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 
 import Welcome from '../components/Welcome';
-import EventsPage from '../containers/EventsPage';
+import { WrapperEventsPage } from '../containers/EventsPage';
 import NotFound from '../components/NotFound';
 
 const Router = () => (  
@@ -16,7 +16,7 @@ const Router = () => (
       <NavBar/>
       <Switch>
         <Route exact path="/" component={Welcome} />
-        <Route exact path="/events" component={EventsPage} />
+        <Route exact path="/events" component={WrapperEventsPage} />
         <Route component={NotFound} />
       </Switch>  
       <Footer/>
