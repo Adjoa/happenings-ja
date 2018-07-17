@@ -3,6 +3,8 @@ import { getEvents } from '../actions/eventActions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import EventsList from '../components/EventsList';
+
 class EventsPage extends React.Component {
   componentDidMount() {
     getEvents()
@@ -11,7 +13,7 @@ class EventsPage extends React.Component {
   render() {
     return (
       <div>
-        <p> A list of events</p>
+        <EventsList />
       </div>
     );
   }
