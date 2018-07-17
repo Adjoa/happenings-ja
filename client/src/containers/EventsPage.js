@@ -1,5 +1,7 @@
 import React from 'react';
 import { getEvents } from '../actions/eventActions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 class EventsPage extends React.Component {
   componentDidMount() {
@@ -15,4 +17,12 @@ class EventsPage extends React.Component {
   }
 }
 
-export default EventsPage;
+function mapDispatchToProps(dispatch){
+  bindActionCreators({getEvents: getEvents}, dispatch)
+}
+ 
+// function mapStateToProps(state){
+//   return {events: state.events}
+// }
+
+export const WrapperEventsPage = connect(null, mapDispatchToProps)(EventsPage);
