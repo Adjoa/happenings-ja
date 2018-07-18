@@ -11,7 +11,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 
-render(
+const router = (
   <Provider store={store} >
     <BrowserRouter>
       <Switch>
@@ -21,9 +21,10 @@ render(
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
-  </Provider>, document.getElementById('root')
-  );
+  </Provider>
+  )
 
+render(router, document.getElementById('root'));
 registerServiceWorker();
 
 
