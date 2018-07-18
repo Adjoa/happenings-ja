@@ -1,8 +1,7 @@
 import React from 'react';
-import { getEvents } from '../actions/eventActions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
+import { getEvents } from '../actions/eventActions';
 import EventsList from '../components/EventsList';
 
 class EventsPage extends React.Component {
@@ -20,7 +19,7 @@ class EventsPage extends React.Component {
 }
 
 function mapDispatchToProps(dispatch){
-  bindActionCreators({getEvents: getEvents}, dispatch)
+  return bindActionCreators({getEvents: getEvents}, dispatch)
 }
  
 function mapStateToProps(state){
