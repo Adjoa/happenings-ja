@@ -1,15 +1,31 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-
-import Router from './components/Router';
-import store from './store';
 import registerServiceWorker from './registerServiceWorker';
+
+import Welcome from './components/Welcome';
+import WrapperApp from './components/WrapperApp';
+import EventShow from './containers/EventShow';
+import NotFound from './components/NotFound';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 
 render(
   <Provider store={store} >
-  <Router />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/events" component={WrapperApp} />
+        <Route path={`/events/:eventId`} component={EventShow} />
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   </Provider>, document.getElementById('root')
   );
 
 registerServiceWorker();
+
+
+    
+  
