@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
   return (
     <div>
-      <NavLink to="/search">Find an event</NavLink>&nbsp;
+      <NavLink to="/events">Find an event</NavLink>&nbsp;
       { /* <NavLink to="/organize">Submit an event</NavLink> */ }
     </div>
   );
