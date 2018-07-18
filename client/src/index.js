@@ -4,6 +4,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import Welcome from './components/Welcome';
 import WrapperApp from './components/WrapperApp';
+import EventForm from './components/EventForm';
 import EventShow from './containers/EventShow';
 import NotFound from './components/NotFound';
 
@@ -17,6 +18,7 @@ const router = (
       <Switch>
         <Route exact path="/" component={Welcome} />
         <Route exact path="/events" component={WrapperApp} />
+        <Route exact path="/events/new" component={EventForm} />
         <Route path={`/events/:eventId`} component={EventShow} />
         <Route component={NotFound} />
       </Switch>
