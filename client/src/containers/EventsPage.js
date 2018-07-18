@@ -15,6 +15,7 @@ class EventsPage extends React.Component {
     return (
       <div>
         <EventsList events={ this.props.events.events }/>
+        <Route path={`${this.props.match.url}/:eventId`} component={EventShow}/>
       </div>
     );
   }
