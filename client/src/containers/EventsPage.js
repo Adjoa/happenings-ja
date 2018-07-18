@@ -6,7 +6,7 @@ import EventsList from '../components/EventsList';
 
 class EventsPage extends React.Component {
   componentDidMount() {
-    getEvents()
+    this.props.getEvents()
   }
 
   render() {
