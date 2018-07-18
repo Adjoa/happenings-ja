@@ -1,7 +1,9 @@
 import React from 'react';
 
-const EventsListItem = () => (
-  <div>I am an item!</div>
+const EventsListItem = ({ event }) => (
+  <div>
+    <h2>{ event.name }</h2>
+  </div>
   );
   
 export default EventsListItem;
