@@ -1,8 +1,10 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 import { getEvents } from '../actions/eventActions';
 import EventsList from '../components/EventsList';
+import EventShow from './EventShow';
 
 class EventsPage extends React.Component {
   componentDidMount() {
