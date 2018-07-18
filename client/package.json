@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://172.31.46.48:8081/",
+  "proxy": "http://172.31.46.48:8081",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
