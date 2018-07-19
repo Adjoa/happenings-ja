@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../actions/eventActions';
  
 class EventForm extends React.Component {
   constructor() {
     super();
     let initialState = {
-        event: {
           name: '',
           start_time: '',
           end_time: '',
@@ -17,20 +19,29 @@ class EventForm extends React.Component {
           },
           description: ''
         }
-      }
     
     this.state = initialState;
   }
   
   handleChange = (event) => {
-    console.log(event.target)
     const { value, name } = event.target;
     this.setState({ [name]: value });
-    console.log(this.state)
+  }
+  
+  handleAddressChange = (event) => {
+    const { address } = this.state;
+    const {value, name } = event.target
+    this.setState({
+      address: {
+        ...address,
+        [name] : value
+      }
+    }); 
   }
   
   handleSubmit = (event) => {
     event.preventDefault();
+    console.log(this.state);
     this.props.addEvent(this.state);
     this.setState(this.initialState);
   }
@@ -42,36 +53,36 @@ class EventForm extends React.Component {
           <h2>Event Info</h2>
             <label>Name</label>
             <input type="text" 
-              name="event[name]"
+              name="name"
               onChange={this.handleChange} />
             <label>Start</label>
             <input type="text" 
-              name="event[start_time]"
+              name="start_time"
               onChange={this.handleChange} />
             <label>End</label>
             <input type="text" 
-              name="event[end_time]"
+              name="end_time"
               onChange={this.handleChange} />
             <h3>Address</h3>
               <label>Line 1</label>
               <input type="text" 
-                name="event[address][line1]"
-                onChange={this.handleChange} />
+                name="line1"
+                onChange={this.handleAddressChange} />
               <label>Line 2</label>
               <input type="text" 
-                name="event[address][line2]"
-                onChange={this.handleChange} />
+                name="line2"
+                onChange={this.handleAddressChange} />
               <label>City</label>
               <input type="text" 
-                name="event[address][city]"
-                onChange={this.handleChange} />
+                name="city"
+                onChange={this.handleAddressChange} />
               <label>Parish</label>
               <input type="text" 
-                name="event[address][parish]"
-                onChange={this.handleChange} />
+                name="parish"
+                onChange={this.handleAddressChange} />
             <h3>Description</h3>
             <input type="textarea"
-              name="event[description]"
+              name="description"
               onChange={this.handleChange} />
           <input type="submit" value="Submit"/>
         </form>
@@ -80,4 +91,8 @@ class EventForm extends React.Component {
   }
 };
 
-export default EventForm;
+function mapDispatchToProps(dispatch){
+  return bindActionCreators(actionCreators, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(EventForm);
