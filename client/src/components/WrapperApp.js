@@ -1,10 +1,10 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { getEvents } from '../actions/eventActions';
+import * as actionCreators from '../actions/eventActions';
 import App from './App';
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({getEvents: getEvents}, dispatch)
+  return bindActionCreators(actionCreators, dispatch)
 }
  
 function mapStateToProps(state){
