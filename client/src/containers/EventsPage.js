@@ -15,7 +15,7 @@ class EventsPage extends React.Component {
     if(eventsReady) {
       return (
         <div>
-          <EventsList events={ this.props.events }/>
+          <EventsList events={ this.props.events.events }/>
         </div>
       );
     } 
