@@ -1,3 +1,4 @@
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/eventActions';
@@ -11,6 +12,17 @@ function mapStateToProps(state){
   return {events: state.events}
 }
 
-const WrapperApp = connect(mapStateToProps, mapDispatchToProps)(App);
+class WrapperApp extends React.Component {
+  render() {
+    return (
+      <App />
+    );
+  }
+}
 
-export default WrapperApp;
+
+// const WrapperApp = connect(mapStateToProps, mapDispatchToProps)(App);
+
+// export default WrapperApp;
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
