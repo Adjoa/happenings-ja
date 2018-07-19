@@ -31,10 +31,14 @@ class EventForm extends React.Component {
     this.setState({ [name]: value });
   }
   
+  handleSubmit = (event) => {
+    event.preventDefault();
+  }
+  
   render() {
     return(
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit} >
           <h2>Organizer Info</h2>
             <label>Name</label>
             <input type="text" name="organizer[name]"
