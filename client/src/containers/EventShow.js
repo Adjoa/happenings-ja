@@ -9,14 +9,13 @@ const EventShow = ({ event }) => {
       <span>{ event.start_time }</span>
       <span>{ event.end_time }</span>
       <h2>{ event.name }</h2>
-      <span>{ event.address }</span>
       <p>{ descriptionAvailable ? event.description : "No description provided." }</p>
     </div>
   )
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const event = state.events.events.find(event => event.id == ownProps.match.params.eventId)
+  const event = state.events.events.find(event => event.id ===  ownProps.match.params.eventId)
   
   if (event) {
     return { event }
