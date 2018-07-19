@@ -2,9 +2,10 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/eventActions';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import EventsList from '../components/EventsList';
+import EventForm from './EventForm';
 import EventShow from './EventShow';
 
 class EventsPage extends React.Component {
@@ -19,7 +20,10 @@ class EventsPage extends React.Component {
       return (
         <div>
           <EventsList events={ this.props.events.events }/>
-          <Route path={`${this.props.match.url}/:eventId`} component={EventShow}/>
+          <Switch>
+            <Route path={`${this.props.match.url}/new`} component={EventForm} />
+            <Route path={`${this.props.match.url}/:eventId`} component={EventShow}/>
+          </Switch>
         </div>
       );
     } 
