@@ -1,6 +1,36 @@
 import React from 'react'
  
 class EventForm extends React.Component {
+  constructor() {
+    super();
+    
+    this.state = {
+      organizer: {
+        name: '',
+        email: '',
+        phone: '',
+        event: {
+          name: '',
+          start_time: '',
+          end_time: '',
+          address: {
+            line1: '',
+            line2: '',
+            city:'',
+            parish:'',
+            country: 'Jamaica'
+          },
+          description: ''
+        }
+      }
+    }
+  }
+  
+  handleChange = (event) => {
+    const { value, name } = event.target;
+    this.setState({ [name]: value });
+  }
+  
   render() {
     return(
       <div>
@@ -15,7 +45,9 @@ class EventForm extends React.Component {
           <h2>Event Info</h2>
             <label>Name</label>
             <input type="text"></input>
-            <label>Time</label>
+            <label>Start</label>
+            <input type="datetime-local"></input>
+            <label>End</label>
             <input type="datetime-local"></input>
             <h3>Address</h3>
               <label>Line 1</label>
@@ -26,6 +58,8 @@ class EventForm extends React.Component {
               <input type="text"></input>
               <label>Parish</label>
               <input type="text"></input>
+            <h3>Description</h3>
+            <input type="textarea"></input>
           <input type="submit" />
         </form>
       </div>
