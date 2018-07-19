@@ -4,7 +4,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import Welcome from './components/Welcome';
 import WrapperApp from './containers/WrapperApp';
-import EventForm from './components/EventForm';
+import EventForm from './containers/EventForm';
 import EventShow from './containers/EventShow';
 import NotFound from './components/NotFound';
 
