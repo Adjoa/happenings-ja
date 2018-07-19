@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch'
 
 export function getEvents() {
+  console.log("Getting events...")
   return (dispatch) => {
     dispatch({ type: 'LOADING_EVENTS' });
     return fetch('/events')
