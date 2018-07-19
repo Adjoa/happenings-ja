@@ -6,7 +6,7 @@ import * as actionCreators from '../actions/eventActions';
 class EventForm extends React.Component {
   constructor() {
     super();
-    let initialState = {
+    this.state = {
           name: '',
           start_time: '',
           end_time: '',
@@ -19,8 +19,6 @@ class EventForm extends React.Component {
           },
           description: ''
         }
-    
-    this.state = initialState;
   }
   
   handleChange = (event) => {
@@ -42,7 +40,6 @@ class EventForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addEvent(this.state);
-    // this.setState(this.initialState);
     event.currentTarget.reset()
   }
   
@@ -53,11 +50,11 @@ class EventForm extends React.Component {
           <h2>Event Info</h2>
             <label>Name</label>
             <input type="text" 
-              name="name"
+              name="name" placeholder="Name required*"
               onChange={this.handleChange} />
             <label>Start</label>
             <input type="text" 
-              name="start_time"
+              name="start_time" placeholder="Start time required*"
               onChange={this.handleChange} />
             <label>End</label>
             <input type="text" 
@@ -66,7 +63,7 @@ class EventForm extends React.Component {
             <h3>Address</h3>
               <label>Line 1</label>
               <input type="text" 
-                name="line1"
+                name="line1" placeholder="Line 1 required*"
                 onChange={this.handleAddressChange} />
               <label>Line 2</label>
               <input type="text" 
@@ -74,11 +71,11 @@ class EventForm extends React.Component {
                 onChange={this.handleAddressChange} />
               <label>City</label>
               <input type="text" 
-                name="city"
+                name="city" placeholder="City required*"
                 onChange={this.handleAddressChange} />
               <label>Parish</label>
               <input type="text" 
-                name="parish"
+                name="parish" placeholder="Parish required*"
                 onChange={this.handleAddressChange} />
             <h3>Description</h3>
             <input type="textarea"
