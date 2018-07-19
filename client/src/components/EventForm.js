@@ -37,30 +37,49 @@ class EventForm extends React.Component {
         <form>
           <h2>Organizer Info</h2>
             <label>Name</label>
-            <input type="text" />
+            <input type="text" name="organizer[name]"
+              onChange={this.handleChange} />
             <label>Email</label>
-            <input type="email"></input>
+            <input type="email" name="organizer[email]"
+              onChange={this.handleChange} />
             <label>Phone</label>
-            <input type="tel"></input>
+            <input type="tel" name="organizer[phone]"
+              onChange={this.handleChange} />
           <h2>Event Info</h2>
             <label>Name</label>
-            <input type="text"></input>
+            <input type="text" 
+              name="organizer[event][name]"
+              onChange={this.handleChange} />
             <label>Start</label>
-            <input type="datetime-local"></input>
+            <input type="datetime-local" 
+              name="organizer[event][start_time]"
+              onChange={this.handleChange} />
             <label>End</label>
-            <input type="datetime-local"></input>
+            <input type="datetime-local" 
+              name="organizer[event][end_time]"
+              onChange={this.handleChange} />
             <h3>Address</h3>
               <label>Line 1</label>
-              <input type="text"></input>
+              <input type="text" 
+                name="organizer[event][address][line1]"
+                onChange={this.handleChange} />
               <label>Line 2</label>
-              <input type="text"></input>
+              <input type="text" 
+                name="organizer[event][address][line2]"
+                onChange={this.handleChange} />
               <label>City</label>
-              <input type="text"></input>
+              <input type="text" 
+                name="organizer[event][address][city]"
+                onChange={this.handleChange} />
               <label>Parish</label>
-              <input type="text"></input>
+              <input type="text" 
+                name="organizer[event][address][parish]"
+                onChange={this.handleChange} />
             <h3>Description</h3>
-            <input type="textarea"></input>
-          <input type="submit" />
+            <input type="textarea"
+              name="organizer[event][description]"
+              onChange={this.handleChange} />
+          <input type="submit" value="Submit"/>
         </form>
       </div>
     );
