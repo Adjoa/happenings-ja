@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EventsListItem from './EventsListItem';
-import EventShow from '../containers/EventShow';
 
 const EventsList = ({ events }) => {
   const renderEvents = events.map(event => 
