@@ -29,7 +29,7 @@ module V1
     private
     
     def event_params
-      params.require(:event).permit(:organizer_id, :name, :start_time, :end_time, :description, 
+      params.require(:event).permit(:name, :start_time, :end_time, :description, 
         address_attributes: [:line1, :line2, :city, :parish, :country])
     end
     
