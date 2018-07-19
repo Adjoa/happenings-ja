@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <nav>
       <NavLink to="/events">Find an event</NavLink>&nbsp;
-      { /* <NavLink to="/organize">Submit an event</NavLink> */ }
+      <NavLink to="/events/new">Submit an event</NavLink>
     </nav>
   );
 };
