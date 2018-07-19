@@ -19,7 +19,7 @@ class App extends React.Component {
         <div>
           <Header/>
           <NavBar/>
-          <EventsPage events={ this.props.events.events} />
+          <EventsPage events={ this.props.events.events } />
           <Footer/>
         </div> : "Loading..."
       }
