@@ -31,11 +31,8 @@ class EventForm extends React.Component {
   
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.store.dispatch({
-      type: 'ADD_EVENT',
-      organizer: this.state,
-    });
-    this.setState(this.initialState)
+    this.props.addEvent(this.state);
+    this.setState(this.initialState);
   }
   
   render() {
@@ -48,11 +45,11 @@ class EventForm extends React.Component {
               name="event[name]"
               onChange={this.handleChange} />
             <label>Start</label>
-            <input type="datetime-local" 
+            <input type="text" 
               name="event[start_time]"
               onChange={this.handleChange} />
             <label>End</label>
-            <input type="datetime-local" 
+            <input type="text" 
               name="event[end_time]"
               onChange={this.handleChange} />
             <h3>Address</h3>
@@ -82,5 +79,5 @@ class EventForm extends React.Component {
     );
   }
 };
- 
+
 export default EventForm;
