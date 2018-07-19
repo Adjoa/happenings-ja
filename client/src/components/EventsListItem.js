@@ -8,9 +8,8 @@ const EventsListItem = ({ event }) => {
   return(
     <div>
       <span>{ event.start_time }</span>
-      <h2>{ event.name }</h2>
+      <Link key={event.id} to={`/events/${event.id}`}>{ event.name }</Link>
       <p>{ descriptionAvailable ? formatDescription(event.description) : "No description provided." }</p>
-      <Link to={`/events/${event.id}`}>See More</Link>
     </div>
   );
 };
