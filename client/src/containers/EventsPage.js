@@ -2,7 +2,10 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/eventActions';
+import { Route } from 'react-router-dom';
+
 import EventsList from '../components/EventsList';
+import EventShow from './EventShow';
 
 class EventsPage extends React.Component {
   componentDidMount() {
@@ -16,6 +19,7 @@ class EventsPage extends React.Component {
       return (
         <div>
           <EventsList events={ this.props.events.events }/>
+          <Route path={`${this.props.match.url}/:eventId`} component={EventShow}/>
         </div>
       );
     } 
