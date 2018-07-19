@@ -39,8 +39,23 @@ class EventForm extends React.Component {
   
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.addEvent(this.state);
-    event.currentTarget.reset()
+    
+    let requiredFields = [
+      this.state.name,
+      this.state.start_time,
+      this.state.address.line1,
+      this.state.address.city,
+      this.state.address.parish
+      ]
+    
+    // const result = requiredFields.filter(field => field === '');
+    let result = requiredFields.filter(field => field.length === 0);
+    console.log(result);
+    
+    if(result.length  === 0) {
+      this.props.addEvent(this.state);
+      event.currentTarget.reset()
+    }
   }
   
   render() {
