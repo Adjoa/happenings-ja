@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
-import EventsPage from '../containers/EventsPage';
+import EventsPage from '../components/EventsPage';
 import Footer from '../components/Footer';
 
 class App extends React.Component {
