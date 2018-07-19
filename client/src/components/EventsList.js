@@ -1,10 +1,11 @@
 import React from 'react';
 import EventsListItem from './EventsListItem';
+import EventShow from '../containers/EventShow';
 
-const EventsList = (props) => {
-  const eventsListItems = props.events.map(listItem => 
-    <li key={listItem.id}>
-      <EventsListItem event={listItem} />
+const EventsList = ({ events }) => {
+  const renderEvents = events.map(event => 
+    <li key={event.id}>
+      <EventsListItem event={event} />
     </li>
   );
   
@@ -12,7 +13,7 @@ const EventsList = (props) => {
     <div>
       <div>
         <ul>
-          { eventsListItems }
+          { renderEvents }
         </ul>
       </div>
     </div>
