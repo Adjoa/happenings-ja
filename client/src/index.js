@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
 import Welcome from './components/Welcome';
-import WrapperApp from './components/WrapperApp';
+import WrapperApp from './containers/WrapperApp';
 import EventForm from './components/EventForm';
 import EventShow from './containers/EventShow';
 import NotFound from './components/NotFound';
