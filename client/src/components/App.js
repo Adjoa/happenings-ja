@@ -11,12 +11,18 @@ class App extends React.Component {
   }
   
   render() {
+    let eventsReady = !this.props.loading;
+    
     return (
       <div>
-        <Header/>
-        <NavBar/>
-        <EventsPage events={ this.props.events.events} />
-        <Footer/>
+      { eventsReady ?
+        <div>
+          <Header/>
+          <NavBar/>
+          <EventsPage events={ this.props.events.events} />
+          <Footer/>
+        </div> : "Loading..."
+      }
       </div>
     );
   }
