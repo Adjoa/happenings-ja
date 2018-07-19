@@ -1,7 +1,8 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../actions/eventActions';
 import EventsList from '../components/EventsList';
-import EventShow from './EventShow';
-import EventForm from './EventForm';
 
 class EventsPage extends React.Component {
   componentDidMount() {
@@ -24,6 +25,16 @@ class EventsPage extends React.Component {
   }
 }
 
-export default EventsPage;
+function mapDispatchToProps(dispatch){
+  return bindActionCreators(actionCreators, dispatch)
+}
+
+const mapStateToProps = (state) => {
+  return {
+    events: state.events
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EventsPage);
 
 
