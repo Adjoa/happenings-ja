@@ -1,9 +1,15 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import Header from '../components/Header';
-import NavBar from '../components/NavBar';
-import EventsPage from '../components/EventsPage';
-import Footer from '../components/Footer';
+import Header from './Header';
+import NavBar from './NavBar';
+import Welcome from './Welcome';
+import EventsPage from './EventsPage';
+import NotFound from './NotFound';
+import Footer from './Footer';
+
+import EventForm from '../containers/EventForm';
+import EventShow from '../containers/EventShow';
 
 class App extends React.Component {
   componentDidMount() {
@@ -19,7 +25,14 @@ class App extends React.Component {
         <div>
           <Header/>
           <NavBar/>
-          <EventsPage events={ this.props.events.events } />
+          <Switch>
+            <Route exact path="/" component={Welcome} />
+            <Route exact path="/events" component={EventsPage} />
+            <Route exact path="/events/new" component={EventForm} />
+            <Route path={`/events/:eventId`} component={EventShow} />
+            <Route component={NotFound} />
+          </Switch>
+          {/* <EventsPage events={ this.props.events.events } />*/}
           <Footer/>
         </div> : "Loading..."
       }
