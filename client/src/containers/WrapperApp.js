@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/eventActions';
-import App from './App';
+import App from '../components/App';
 
 function mapDispatchToProps(dispatch){
   return bindActionCreators(actionCreators, dispatch)
