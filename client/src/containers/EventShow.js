@@ -6,10 +6,8 @@ const EventShow = ({ event }) => {
   
   return(
     <div>
-    <span>
-      <h3>Starts at { event.start_time }</h3>
-      <h3> Ends at { event.end_time }</h3>
-    </span>
+      <span>{ event.start_time }</span>
+      <span>{ event.end_time }</span>
       <h2>{ event.name }</h2>
       <p>{ descriptionAvailable ? event.description : "No description provided." }</p>
     </div>
