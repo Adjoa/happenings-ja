@@ -32,11 +32,5 @@ class Header extends React.Component {
       );
   }
 }
-// const Header = () => (
-//   <header>
-//     <Link to="/"><h1>Happenings JA</h1></Link>
-//   </header>
-//   );
-
   
 export default  withStyles(styles)(Header);
