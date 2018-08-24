@@ -50,6 +50,5 @@ class EventsListItem extends React.Component {
     );
   }
 }
-  
-// export default EventsListItem;
+
 export default withStyles(styles)(EventsListItem);
