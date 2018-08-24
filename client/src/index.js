@@ -8,8 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 
-import './css/index.css';
-
 const router = (
   <Provider store={store} >
     <BrowserRouter>
