@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
@@ -23,7 +22,7 @@ class NavBar extends React.Component {
   render() {
     const { classes } = this.props;
     
-    return(
+    return (
       <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
             <div className={classes.heroButtons}>

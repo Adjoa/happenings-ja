@@ -1,5 +1,4 @@
 import React from 'react';
-
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -17,16 +16,14 @@ class Header extends React.Component {
     const { classes } = this.props;
     
     return (
-      <React.Fragment>
-        <AppBar position="static" className={classes.appBar}>
-          <Toolbar>
-            <Typography variant="title" color="inherit" noWrap>
-              Happenings JA
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </React.Fragment>
-      );
+      <AppBar position="static" className={classes.appBar}>
+        <Toolbar>
+          <Typography variant="title" color="inherit" noWrap>
+            Happenings JA
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    );
   }
 }
   

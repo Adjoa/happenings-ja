@@ -28,7 +28,7 @@ class EventsListItem extends React.Component {
     const descriptionAvailable = this.props.event.description;
     const { classes } = this.props;
     
-    return(
+    return (
         <Card className={classes.card}>
           <CardContent className={classes.cardContent}>
             <Typography gutterBottom variant="headline" component="h2">
