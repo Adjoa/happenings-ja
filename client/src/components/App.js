@@ -15,7 +15,7 @@ class App extends React.Component {
           <Header/>
           <NavBar/>
           <Switch>
-            <Route path="/" component={EventsPage} />
+            {/*  <Route path="/" component={EventsPage} /> */}
             <Route path="/events" component={EventsPage} />
             <Route component={NotFound} />
           </Switch>
