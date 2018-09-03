@@ -44,7 +44,6 @@ class EventShow extends React.Component {
   };
   
   render() {
-    const descriptionAvailable = this.props.event.description;
     const { classes, event } = this.props;  
     
     return (
@@ -60,7 +59,7 @@ class EventShow extends React.Component {
             <Typography>{ event.start_time }</Typography>
             <Typography>{ event.end_time }</Typography>
             <Typography>{ event.name }</Typography>
-            <Typography>{ descriptionAvailable ? event.description : "No description provided." }</Typography>
+            <Typography>{ event.description ? event.description : "No description provided." }</Typography>
           </div>
         </Modal>
       </div>
