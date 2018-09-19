@@ -158,27 +158,63 @@ class EventForm extends React.Component {
                 
               <h3>Address</h3>
               
-                <label>Line 1</label>
-                <input type="text" 
-                  name="line1" placeholder="Line 1 required*"
-                  onChange={this.handleAddressChange} />
-                  
+                <TextField
+                  name="line1"
+                  label="Line 1"
+                  className={classes.textField}
+                  helperText="Required *"
+                  onChange={this.handleAddressChange}
+                  margin="normal"
+                />
+ 
+                <TextField
+                  name="end_time"
+                  label="End Time"
+                  className={classes.textField}
+                  onChange={this.handleChange}
+                  margin="normal"
+                />
+                
                 <label>Line 2</label>
                 <input type="text" 
                   name="line2"
                   onChange={this.handleAddressChange} />
-                  
+                
+                <TextField
+                  name="end_time"
+                  label="End Time"
+                  className={classes.textField}
+                  onChange={this.handleChange}
+                  margin="normal"
+                />
+                
                 <label>City</label>
                 <input type="text" 
                   name="city" placeholder="City required*"
                   onChange={this.handleAddressChange} />
-                  
+                
+                <TextField
+                  name="end_time"
+                  label="End Time"
+                  className={classes.textField}
+                  onChange={this.handleChange}
+                  margin="normal"
+                />
+                
                 <label>Parish</label>
                 <input type="text" 
                   name="parish" placeholder="Parish required*"
                   onChange={this.handleAddressChange} />
                   
               <h3>Description</h3>
+              <TextField
+                name="end_time"
+                label="End Time"
+                className={classes.textField}
+                onChange={this.handleChange}
+                margin="normal"
+              />
+                
               <input type="textarea"
                 name="description"
                 onChange={this.handleChange} />
