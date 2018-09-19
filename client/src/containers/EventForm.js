@@ -99,6 +99,9 @@ class EventForm extends React.Component {
     
     return(
       <div>
+        <Button onClick={this.handleOpen} size="small" color="primary">
+          Submit an event
+        </Button>
         <form onSubmit={this.handleSubmit} >
           <h2>Event Info</h2>
             <label>Name</label>
