@@ -30,6 +30,9 @@ const styles = theme => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing.unit * 4,
   },
+  formControl: {
+    margin: theme.spacing.unit,
+  },
 });
 
 class EventForm extends React.Component {
