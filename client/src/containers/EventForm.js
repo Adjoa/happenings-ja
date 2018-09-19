@@ -129,7 +129,7 @@ class EventForm extends React.Component {
         >
           <div className={classes.paper}>
           <form onSubmit={this.handleSubmit} >
-              <Typography component="h2">Event Info</Typography>
+              <Typography variant="title">Event Info</Typography>
               
               <TextField
                 name="name"
