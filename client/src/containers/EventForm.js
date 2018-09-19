@@ -133,7 +133,7 @@ class EventForm extends React.Component {
               <TextField
                 name="name"
                 label="Name"
-                className={classes.textField}
+                className={classNames(classes.textField, classes.dense)}
                 helperText="Required*"
                 onChange={this.handleChange}
                 margin="normal"
@@ -142,7 +142,7 @@ class EventForm extends React.Component {
               <TextField
                 name="start_time"
                 label="Start Time"
-                className={classes.textField}
+                className={classNames(classes.textField, classes.dense)}
                 helperText="Required*"
                 onChange={this.handleChange}
                 margin="normal"
@@ -151,7 +151,7 @@ class EventForm extends React.Component {
               <TextField
                 name="end_time"
                 label="End Time"
-                className={classes.textField}
+                className={classNames(classes.textField, classes.dense)}
                 onChange={this.handleChange}
                 margin="normal"
               />
@@ -161,7 +161,7 @@ class EventForm extends React.Component {
                 <TextField
                   name="line1"
                   label="Line 1"
-                  className={classes.textField}
+                  className={classNames(classes.textField, classes.dense)}
                   helperText="Required *"
                   onChange={this.handleAddressChange}
                   margin="normal"
@@ -170,7 +170,7 @@ class EventForm extends React.Component {
                 <TextField
                   name="line2"
                   label="Line 2"
-                  className={classes.textField}
+                  className={classNames(classes.textField, classes.dense)}
                   onChange={this.handleChange}
                   margin="normal"
                 />
@@ -178,7 +178,7 @@ class EventForm extends React.Component {
                 <TextField
                   name="city"
                   label="City"
-                  className={classes.textField}
+                  className={classNames(classes.textField, classes.dense)}
                   helperText="Required *"
                   onChange={this.handleAddressChange}
                   margin="normal"
@@ -187,7 +187,7 @@ class EventForm extends React.Component {
                 <TextField
                   name="parish"
                   label="Parish"
-                  className={classes.textField}
+                  className={classNames(classes.textField, classes.dense)}
                   helperText="Required *"
                   onChange={this.handleAddressChange}
                   margin="normal"
@@ -196,7 +196,7 @@ class EventForm extends React.Component {
               <TextField
                 name="description"
                 label="Description"
-                className={classes.textField}
+                className={classNames(classes.textField, classes.dense)}
                 onChange={this.handleChange}
                 margin="normal"
               />
