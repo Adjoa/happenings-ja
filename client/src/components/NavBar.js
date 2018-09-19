@@ -1,4 +1,5 @@
 import React from 'react';
+import EventForm from './EventForm';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -33,9 +34,10 @@ class NavBar extends React.Component {
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary" component={Link} to="/events/new">
+                  <EventForm />
+                  {/* <Button variant="outlined" color="primary" component={Link} to="/events/new">
                     Submit an event
-                  </Button>
+                  </Button> */}
                 </Grid>
               </Grid>
             </div>
