@@ -116,6 +116,7 @@ class EventForm extends React.Component {
           open={this.state.open}
           onClose={this.handleClose}
         >
+          <div>
           <form onSubmit={this.handleSubmit} >
             <h2>Event Info</h2>
               <label>Name</label>
@@ -153,6 +154,7 @@ class EventForm extends React.Component {
                 onChange={this.handleChange} />
             <input type="submit" value="Submit"/>
           </form>
+          </div>
         </Modal>
       </div>
     );
