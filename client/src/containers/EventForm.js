@@ -185,17 +185,13 @@ class EventForm extends React.Component {
                 />
                 
                 <TextField
-                  name="end_time"
-                  label="End Time"
+                  name="parish"
+                  label="Parish"
                   className={classes.textField}
-                  onChange={this.handleChange}
+                  helperText="Required *"
+                  onChange={this.handleAddressChange}
                   margin="normal"
                 />
-                
-                <label>Parish</label>
-                <input type="text" 
-                  name="parish" placeholder="Parish required*"
-                  onChange={this.handleAddressChange} />
                   
               <h3>Description</h3>
               <TextField
