@@ -48,7 +48,6 @@ class EventForm extends React.Component {
       this.state.address.parish
       ]
     
-    // const result = requiredFields.filter(field => field === '');
     let result = requiredFields.filter(field => field.length === 0);
     console.log(result);
     
