@@ -137,7 +137,7 @@ class EventForm extends React.Component {
                 className={classNames(classes.textField, classes.dense)}
                 helperText="Required*"
                 onChange={this.handleChange}
-                margin="normal"
+                margin="dense"
               />
               
               <TextField
@@ -146,7 +146,7 @@ class EventForm extends React.Component {
                 className={classNames(classes.textField, classes.dense)}
                 helperText="Required*"
                 onChange={this.handleChange}
-                margin="normal"
+                margin="dense"
               />
               
               <TextField
@@ -154,55 +154,55 @@ class EventForm extends React.Component {
                 label="End Time"
                 className={classNames(classes.textField, classes.dense)}
                 onChange={this.handleChange}
-                margin="normal"
+                margin="dense"
               />
                 
               <h3>Address</h3>
               
-                <TextField
-                  name="line1"
-                  label="Line 1"
-                  className={classNames(classes.textField, classes.dense)}
-                  helperText="Required *"
-                  onChange={this.handleAddressChange}
-                  margin="normal"
-                />
- 
-                <TextField
-                  name="line2"
-                  label="Line 2"
-                  className={classNames(classes.textField, classes.dense)}
-                  onChange={this.handleChange}
-                  margin="normal"
-                />
-                
-                <TextField
-                  name="city"
-                  label="City"
-                  className={classNames(classes.textField, classes.dense)}
-                  helperText="Required *"
-                  onChange={this.handleAddressChange}
-                  margin="normal"
-                />
-                
-                <TextField
-                  name="parish"
-                  label="Parish"
-                  className={classNames(classes.textField, classes.dense)}
-                  helperText="Required *"
-                  onChange={this.handleAddressChange}
-                  margin="normal"
-                />
+              <TextField
+                name="line1"
+                label="Line 1"
+                className={classNames(classes.textField, classes.dense)}
+                helperText="Required *"
+                onChange={this.handleAddressChange}
+                margin="dense"
+              />
+
+              <TextField
+                name="line2"
+                label="Line 2"
+                className={classNames(classes.textField, classes.dense)}
+                onChange={this.handleChange}
+                margin="dense"
+              />
+              
+              <TextField
+                name="city"
+                label="City"
+                className={classNames(classes.textField, classes.dense)}
+                helperText="Required *"
+                onChange={this.handleAddressChange}
+                margin="dense"
+              />
+              
+              <TextField
+                name="parish"
+                label="Parish"
+                className={classNames(classes.textField, classes.dense)}
+                helperText="Required *"
+                onChange={this.handleAddressChange}
+                margin="dense"
+              />
                   
               <TextField
                 name="description"
                 label="Description"
                 className={classNames(classes.textField, classes.dense)}
                 onChange={this.handleChange}
-                margin="normal"
+                margin="dense"
               />
-                
-            <input type="submit" value="Submit"/>
+              
+              <Input type="submit" value="Submit"/>
           </form>
           </div>
         </Modal>
