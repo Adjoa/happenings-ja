@@ -7,18 +7,18 @@ class EventForm extends React.Component {
   constructor() {
     super();
     this.state = {
-          name: '',
-          start_time: '',
-          end_time: '',
-          address: {
-            line1: '',
-            line2: '',
-            city:'',
-            parish:'',
-            country: 'Jamaica'
-          },
-          description: ''
-        }
+      name: '',
+      start_time: '',
+      end_time: '',
+      address: {
+        line1: '',
+        line2: '',
+        city:'',
+        parish:'',
+        country: 'Jamaica'
+      },
+      description: ''
+    }
   }
   
   handleChange = (event) => {
