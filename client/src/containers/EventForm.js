@@ -54,6 +54,10 @@ class EventForm extends React.Component {
     this.setState({ open: true });
   };
   
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+  
   handleChange = (event) => {
     const { value, name } = event.target;
     this.setState({ [name]: value });
