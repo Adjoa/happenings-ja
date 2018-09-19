@@ -168,17 +168,12 @@ class EventForm extends React.Component {
                 />
  
                 <TextField
-                  name="end_time"
-                  label="End Time"
+                  name="line2"
+                  label="Line 2"
                   className={classes.textField}
                   onChange={this.handleChange}
                   margin="normal"
                 />
-                
-                <label>Line 2</label>
-                <input type="text" 
-                  name="line2"
-                  onChange={this.handleAddressChange} />
                 
                 <TextField
                   name="end_time"
