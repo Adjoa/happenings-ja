@@ -193,18 +193,13 @@ class EventForm extends React.Component {
                   margin="normal"
                 />
                   
-              <h3>Description</h3>
               <TextField
-                name="end_time"
-                label="End Time"
+                name="description"
+                label="Description"
                 className={classes.textField}
                 onChange={this.handleChange}
                 margin="normal"
               />
-                
-              <input type="textarea"
-                name="description"
-                onChange={this.handleChange} />
                 
             <input type="submit" value="Submit"/>
           </form>
