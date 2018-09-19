@@ -119,10 +119,17 @@ class EventForm extends React.Component {
           <div>
           <form onSubmit={this.handleSubmit} >
             <h2>Event Info</h2>
-              <label>Name</label>
+              <FormControl className={classes.formControl}>
+              <InputLabel htmlFor="name-simple">Name</InputLabel>
+              <Input name="name" type="text" onChange={this.handleChange} />
+              <FormHelperText>Required *</FormHelperText>
+              </FormControl>
+              
+              {/* <label>Name</label>
               <input type="text" 
                 name="name" placeholder="Name required*"
-                onChange={this.handleChange} />
+                onChange={this.handleChange} /> */}
+                
               <label>Start</label>
               <input type="text" 
                 name="start_time" placeholder="Start time required*"
