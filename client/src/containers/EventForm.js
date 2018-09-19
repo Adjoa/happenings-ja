@@ -120,7 +120,7 @@ class EventForm extends React.Component {
           open={this.state.open}
           onClose={this.handleClose}
         >
-          <div>
+          <div className={classes.container}>
           <form onSubmit={this.handleSubmit} >
               <Typography component="h2">Event Info</Typography>
               <FormControl>
@@ -176,4 +176,5 @@ function mapDispatchToProps(dispatch){
   return bindActionCreators(actionCreators, dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(EventForm);
+const EventFormWrapper =  connect(null, mapDispatchToProps)(EventForm)
+export default withStyles(styles)(EventFormWrapper);
