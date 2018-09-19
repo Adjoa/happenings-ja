@@ -139,17 +139,14 @@ class EventForm extends React.Component {
                 margin="normal"
               />
               
-              {/* <FormControl>
-              <InputLabel htmlFor="name-simple">Name</InputLabel>
-              <Input name="name" type="text" onChange={this.handleChange} />
-              <FormHelperText>Required *</FormHelperText>
-              </FormControl> */}
-              
-              <FormControl>
-              <InputLabel>Start</InputLabel>
-              <Input type="text" name="start_time" onChange={this.handleChange}  />
-              <FormHelperText>Required *</FormHelperText>  
-              </FormControl>
+              <TextField
+                name="start_time"
+                label="Start Time"
+                className={classes.textField}
+                helperText="Required*"
+                onChange={this.handleChange}
+                margin="normal"
+              />
               
               <label>End</label>
               <input type="text" 
