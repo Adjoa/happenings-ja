@@ -1,5 +1,5 @@
 import React from 'react';
-import EventForm from './EventForm';
+import EventForm from '../containers/EventForm';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
