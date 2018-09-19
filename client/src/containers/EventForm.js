@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../actions/eventActions';
 import Modal from '@material-ui/core/Modal';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
  
 class EventForm extends React.Component {
   constructor() {
