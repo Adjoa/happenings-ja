@@ -35,6 +35,7 @@ class EventForm extends React.Component {
   constructor() {
     super();
     this.state = {
+      open: false,
       name: '',
       start_time: '',
       end_time: '',
