@@ -156,12 +156,10 @@ class EventForm extends React.Component {
                 onChange={this.handleChange}
                 margin="dense"
               />
-                
-              <h3>Address</h3>
               
               <TextField
                 name="line1"
-                label="Line 1"
+                label="Address Line 1"
                 className={classNames(classes.textField, classes.dense)}
                 helperText="Required *"
                 onChange={this.handleAddressChange}
@@ -170,7 +168,7 @@ class EventForm extends React.Component {
 
               <TextField
                 name="line2"
-                label="Line 2"
+                label="Address Line 2"
                 className={classNames(classes.textField, classes.dense)}
                 onChange={this.handleChange}
                 margin="dense"
