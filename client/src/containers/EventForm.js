@@ -122,7 +122,7 @@ class EventForm extends React.Component {
         >
           <div>
           <form onSubmit={this.handleSubmit} >
-            <h2>Event Info</h2>
+              <Typography component="h2">Event Info</Typography>
               <FormControl>
               <InputLabel htmlFor="name-simple">Name</InputLabel>
               <Input name="name" type="text" onChange={this.handleChange} />
