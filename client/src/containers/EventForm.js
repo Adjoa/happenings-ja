@@ -120,7 +120,7 @@ class EventForm extends React.Component {
           open={this.state.open}
           onClose={this.handleClose}
         >
-          <div className={classes.container}>
+          <div className={classes.paper}>
           <form onSubmit={this.handleSubmit} >
               <Typography component="h2">Event Info</Typography>
               <FormControl>
