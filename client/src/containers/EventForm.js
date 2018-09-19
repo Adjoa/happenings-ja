@@ -6,6 +6,10 @@ import Modal from '@material-ui/core/Modal';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
  
+ function rand() {
+  return Math.round(Math.random() * 20) - 10;
+}
+
 class EventForm extends React.Component {
   constructor() {
     super();
