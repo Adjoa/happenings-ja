@@ -95,6 +95,8 @@ class EventForm extends React.Component {
   }
   
   render() {
+    const { classes, event } = this.props;
+    
     return(
       <div>
         <form onSubmit={this.handleSubmit} >
